@@ -5,8 +5,9 @@ import axios from 'axios';
 * - baseURL apunta al backend
 * - headers comunes
 */
-const backendUrl = import.meta.env.VITE_API_URL
-  ? import.meta.env.VITE_API_URL.replace(/\/$/, '').replace(/\/api$/, '')
+const rawBackendUrl = import.meta.env.VITE_API_URL?.trim();
+const backendUrl = rawBackendUrl && rawBackendUrl !== '.'
+  ? rawBackendUrl.replace(/\/+$|\/api$/g, '').trim()
   : 'https://t4-backend-qikc.onrender.com';
 
 const api = axios.create({

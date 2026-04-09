@@ -1,4 +1,4 @@
-import { HashRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
 
 //Componentes Layouts
 import { Content } from './features/layout/components/Content'
@@ -19,9 +19,11 @@ export const AppRoutes = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Content />} />
-        <Route path='/Api' element={<ProtectedRoute><ApiRyc /></ProtectedRoute>} />
-        <Route path='/errors' element={<ProtectedRoute><ErrorGuard /></ProtectedRoute>} />
-        <Route path='/login' element={<Login />} />
+        <Route path="/api" element={<ProtectedRoute><ApiRyc /></ProtectedRoute>} />
+        <Route path="/Api" element={<Navigate to="/api" replace />} />
+        <Route path="/errors" element={<ProtectedRoute><ErrorGuard /></ProtectedRoute>} />
+        <Route path="/login" element={<Login />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer />
     </HashRouter>

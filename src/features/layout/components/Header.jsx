@@ -3,17 +3,17 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 // MUI
 import {
-  AppBar,
-  Box,
-  Button,
-  Drawer,
-  IconButton,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
-  Toolbar,
-  Typography,
+    AppBar,
+    Box,
+    Button,
+    Drawer,
+    IconButton,
+    List,
+    ListItem,
+    ListItemButton,
+    ListItemText,
+    Toolbar,
+    Typography,
 } from "@mui/material";
 
 // ICONOS
@@ -65,7 +65,7 @@ export const Header = () => {
   const handleScrollTo = (item) => {
     if (item === "Apis") {
       setOpen(false);
-      navigate("/Api");
+      navigate("/api");
       return;
     }
 
