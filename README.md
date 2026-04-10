@@ -32,24 +32,33 @@ Para usar la aplicación, simplemente navega a `http://localhost:3000` en tu nav
 
 ## 📂 Estructura del Proyecto
 ```markdown
-.
-├── node_modules
-├── public
-├── src
-│   ├── App.jsx
-│   ├── AppRoutes.jsx
-│   ├── main.jsx
-│   ├── features
-│   │   ├── auth
-│   │   │   ├── api
-│   │   │   │   ├── axios.js
-│   │   │   ├── components
-│   │   │   │   ├── ProtectedRoute.jsx
-│   │   │   ├── routes.js
-│   ├── index.html
-├── vite.config.js
-├── package.json
-
+tf_3256502/
+├── dist/                        
+├── node_modules/               
+├── public/                     
+│   ├── img/                    
+│   └── robots.txt
+├── src/                         
+│   ├── features/                
+│   │   ├── auth/                
+│   │   └── layout/              
+│   ├── shared/                  
+│   │   ├── components/         
+│   │   └── styles/             
+│   ├── App.jsx                  
+│   ├── AppRoutes.jsx            
+│   ├── main.jsx                 
+│   └── Routes.js                
+├── .env                         
+├── .env.production              
+├── .gitignore                   
+├── .npmrc                       
+├── eslint.config.js             
+├── index.html                   
+├── package-lock.json            
+├── package.json                 
+├── README.md                    
+└── vite.config.js              
 
 
 #📝 Licencia
